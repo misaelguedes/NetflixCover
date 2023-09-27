@@ -60,7 +60,25 @@ export default {
                 slug: 'documentary',
                 title: 'Documentários',
                 itens: await baseFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${Api_Key}`)
+            },
+        ];
+    },
+    getMovieInfo: async (movieId, type) => {
+        let info = {};
+
+        if (movieId) {
+            switch (type) {
+                case 'movie':
+                    info = await baseFetch(`/movie/${movieId}?language=pt-BR&api_key=${Api_Key}`)
+                break
+                case 'tv':
+                    info = await baseFetch(`/tv/${movieId}?language=pt-BR&api_key=${Api_Key}`)
+                break
+                default:
+                    info = null
             }
-        ]
+        }
+
+        return info;
     }
 }
