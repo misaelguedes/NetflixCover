@@ -24,8 +24,8 @@ export default function FeaturedMovie({item}) {
                     </div>
                     <div className='description'>{item.overview}</div>
                     <div className='buttons'>
-                        <a href={`/watch/${item.id}`}>► Assistir</a>
-                        <a href={`/list/add${item.id}`}>+ Minha Lista</a>
+                        <a className='watch' href={`/watch/${item.id}`}>► Assistir</a>
+                        <a className='mylist' href={`/list/add${item.id}`}>+ Minha Lista</a>
                     </div>
                     <div className='genres'><strong>Gêneros: </strong>{genres.join(', ')}</div>
                 </div>
