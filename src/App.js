@@ -3,6 +3,7 @@ import Tmdb from "./Tmdb";
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
           </div>
         ))}
       </section>
+      <Footer/>
     </div>
   )
 }
