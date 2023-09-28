@@ -12,7 +12,7 @@
 }
 
 .list {
-    width: 9999999px;
+    transition: all ease 0.5s;
 }
 
 .item {
@@ -29,4 +29,31 @@
 .item img:hover {
     transform: scale(1);
     transition: all ease 0.2s;
+}
+
+.left, .right {
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.left:hover, .right:hover {
+    opacity: 1;
 }
