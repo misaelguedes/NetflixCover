@@ -4,6 +4,7 @@ import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Loading from './components/Loading';
 import './App.css';
 
 export default function App() {
@@ -45,6 +46,10 @@ export default function App() {
 
   return (
     <div className='page'>
+
+      {movieList.length <= 0 &&
+        <Loading/>
+      }
 
       <Header black={blackHeader}/>
 
