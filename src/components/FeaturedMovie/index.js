@@ -22,7 +22,7 @@ export default function FeaturedMovie({item}) {
                         <div className='year'>Lançamento: {firstDate.getFullYear()}</div>
                         <div className='seasons'>{item.number_of_seasons} {item.number_of_seasons > 1 ? 'Temporadas' : 'Temporada'}</div>
                     </div>
-                    <div className='description'>{item.overview.length > 350 ? `${item.overview.slice(0, 350)}...` : item.overview}</div>
+                    <div className='description'>{item.overview.length > 200 ? `${item.overview.slice(0, 200)}...` : item.overview}</div>
                     <div className='buttons'>
                         <a className='watch' href={`/watch/${item.id}`}>► Assistir</a>
                         <a className='mylist' href={`/list/add${item.id}`}>+ Minha Lista</a>
